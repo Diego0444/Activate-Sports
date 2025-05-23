@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activate Sports</title>
+  <link rel="stylesheet" href="Styles/styles.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome para íconos -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- Banner superior -->
+  <div class="top-banner">ENVÍOS GRATIS EN PEDIDOS MAYORES A $60.000</div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Images/imgindex/logoactivatesports.jpg" alt="Logo Activate Sports" />
+      <span>Activate Sports</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="hombres.html">Hombre</a></li>
+      <li><a href="mujeres.html">Mujer</a></li>
+      <li><a href="niños.html">Niños</a></li>
+      <li><a href="ofertas.html">Ofertas</a></li>
+    </ul>
+    <div class="nav-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </nav>
+
+  <!-- Banner de ofertas -->
+  <div class="ofertas-banner">¡Rebajas de hasta 50% por tiempo limitado!</div>
+
+  <!-- Slider de imágenes -->
+  <section class="slider">
+    <div class="slide active"><img src="Images/imgindex/slide1.jpg" alt="imagen 1" /></div>
+    <div class="slide"><img src="Images/imgindex/slide2.jpg" alt="imagen 2" /></div>
+    <div class="slide"><img src="Images/imgindex/slide3.jpg" alt="imagen 3" /></div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="cards-container">
+    <div class="card hombre"><img src="Images/imgindex/cbum.jpg" alt="Hombre" /></div>
+    <div class="card musculoso"><img src="Images/imgindex/niños.jpg" alt="Niños" /></div>
+    <div class="card mujer"><img src="Images/imgindex/mujer.jpg" alt="Mujer" /></div>
+  </section>
+
+  <!-- Productos destacados -->
+  <section class="productos-destacados">
+    <h2>Productos Destacados</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="Images/imgindex/top.jpg" alt="Producto 1" />
+        <h3>Top Deportivo</h3>
+        <p>$40.000</p>
+        <button data-id="1" class="add-to-cart">Añadir al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="Images/imgindex/leggins.jpg" alt="Producto 2" />
+        <h3>Leggings Mujer</h3>
+        <p>$65.000</p>
+        <button data-id="2" class="add-to-cart">Añadir al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="Images/imgindex/sudaderah.jpg" alt="Producto 3" />
+        <h3>Sudadera Hombre</h3>
+        <p>$70.000</p>
+        <button data-id="3" class="add-to-cart">Añadir al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Suscripción -->
+  <section class="suscripcion">
+    <h2>Suscríbete para recibir ofertas exclusivas</h2>
+    <form>
+      <input type="email" placeholder="Ingresa tu email" required />
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-contenido">
+      <div>
+        <h3>Acerca de</h3>
+        <ul>
+          <li><a href="https://es.wikipedia.org/wiki/Nike">Nuestra historia</a></li>
+          <li><a href="https://us.puma.com/us/es?srsltid=AfmBOoohtPlqD12iY79m5iz4XqgKcY077KAkuZ4-lqkrzMTLWM8usQ6X">Equipo</a></li>
+          <li><a href="https://www.adidas.co/stores">Ubicación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ayuda</h3>
+        <ul>
+          <li><a href="https://www.adidas.co/ayuda">Preguntas frecuentes</a></li>
+          <li><a href="https://us.puma.com/us/es/help/terms-and-conditions">Términos y condiciones</a></li>
+          <li><a href="https://us.puma.com/us/es/help/privacy-policy">Política de privacidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>Email: contacto@activatesports.com</li>
+          <li>Tel: +34 123 456 789</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="redes-sociales">
+      <a href="https://www.facebook.com/Adidas" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/Nike" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/Puma" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/@CalvinKlein" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <p>&copy; 2025 Activate Sports. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script slider automático -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+  </script>
+
+  <!-- Script para "Añadir al carrito" -->
+  <script>
+    const cart = []; // Array para almacenar productos en el carrito
+
+    // Función para agregar productos al carrito
+    function addToCart(event) {
+      const button = event.target; // Botón que disparó el evento
+      const product = button.closest('.producto'); // Contenedor del producto
+      const id = button.getAttribute('data-id'); // ID único del producto
+      const name = product.querySelector('h3').textContent; // Nombre del producto
+      const price = product.querySelector('p').textContent; // Precio del producto
+
+      // Crear objeto del producto
+      const productDetails = { id, name, price };
+
+      // Añadir el producto al carrito
+      cart.push(productDetails);
+
+      // Mostrar mensaje de confirmación
+      alert(`${name} se ha añadido al carrito.`);
+
+      // (Opcional) Mostrar carrito en la consola
+      console.log(cart);
+    }
+
+    // Seleccionar todos los botones de "Añadir al carrito"
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    // Asignar el evento clic a cada botón
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', addToCart);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ofertas | Activate Sports</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="Styles/stylesofertas.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="top-banner">ENVÍOS GRATIS EN PEDIDOS MAYORES A $60.000</div>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Images/imgindex/logoactivatesports.jpg" alt="Logo Activate Sports" />
+      <span>Activate Sports</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="hombres.html">Hombre</a></li>
+      <li><a href="mujeres.html">Mujer</a></li>
+      <li><a href="niños.html">Niños</a></li>
+      <li><a href="ofertas.html" class="active">Ofertas</a></li>
+    </ul>
+    <div class="nav-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </nav>
+
+  <div class="ofertas-banner">¡Aprovecha nuestras ofertas con hasta 50% de descuento!</div>
+
+  <section class="slider">
+    <div class="slide active"><img src="Images/imgofertas/slide1.jpg" alt="Oferta 1" /></div>
+    <div class="slide"><img src="Images/imgofertas/slide2.jpg" alt="Oferta 2" /></div>
+    <div class="slide"><img src="Images/imgofertas/slide3.jpg" alt="Oferta 3" /></div>
+  </section>
+
+  <section class="productos-destacados">
+    <h2>Ofertas Destacadas</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="Images/imgofertas/enterizo.jpg" alt="Enterizo en oferta" />
+        <h3>Enterizo -40%</h3>
+        <p><del>$70.000</del> $42.000</p>
+        <button class="add-to-cart" data-id="101">Añadir al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="Images/imgofertas/camiseta.jpg" alt="Camiseta en oferta" />
+        <h3>Camiseta Dry-Fit -35%</h3>
+        <p><del>$35.000</del> $22.750</p>
+        <button class="add-to-cart" data-id="102">Añadir al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="Images/imgofertas/bikershorts.jpg" alt="Biker Shorts en oferta" />
+        <h3>Biker Shorts -50%</h3>
+        <p><del>$120.000</del> $60.000</p>
+        <button class="add-to-cart" data-id="103">Añadir al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="Images/imgofertas/chaleco.jpg" alt="Chaleco en oferta" />
+        <h3>Chaleco Deportivo -30%</h3>
+        <p><del>$29.500</del> $20.650</p>
+        <button class="add-to-cart" data-id="104">Añadir al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="suscripcion">
+    <h2>Recibe las mejores ofertas directamente en tu correo</h2>
+    <form>
+      <input type="email" placeholder="Ingresa tu email" required />
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-contenido">
+      <div>
+        <h3>Acerca de</h3>
+        <ul>
+          <li><a href="https://es.wikipedia.org/wiki/Nike">Nuestra historia</a></li>
+          <li><a href="https://us.puma.com/us/es?srsltid=AfmBOoohtPlqD12iY79m5iz4XqgKcY077KAkuZ4-lqkrzMTLWM8usQ6X">Equipo</a></li>
+          <li><a href="https://www.adidas.co/stores">Ubicación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ayuda</h3>
+        <ul>
+          <li><a href="https://www.adidas.co/ayuda">Preguntas frecuentes</a></li>
+          <li><a href="https://us.puma.com/us/es/help/terms-and-conditions">Términos y condiciones</a></li>
+          <li><a href="https://us.puma.com/us/es/help/privacy-policy">Política de privacidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>Email: contacto@activatesports.com</li>
+          <li>Tel: +34 123 456 789</li>
+        </ul>
+      </div>
+    </div>
+    <div class="redes-sociales">
+      <a href="https://www.facebook.com/Adidas"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/Nike"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/Puma"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/@CalvinKlein"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 Activate Sports. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+  </script>
+
+  <script>
+    const cart = [];
+
+    function addToCart(event) {
+      const button = event.target;
+      const product = button.closest('.producto');
+      const id = button.getAttribute('data-id');
+      const name = product.querySelector('h3').textContent;
+      const price = product.querySelector('p').textContent;
+
+      const productDetails = { id, name, price };
+      cart.push(productDetails);
+
+      alert(`${name} se ha añadido al carrito.`);
+      console.log(cart);
+    }
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', addToCart);
+    });
+  </script>
+  
+</body>
+</html>
